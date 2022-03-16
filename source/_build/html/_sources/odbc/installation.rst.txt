@@ -13,7 +13,7 @@ A priori, il existe peu de différence entre les différentes versions du driver
 `Lien vers la page de téléchargement <https://support.claris.com/s/article/Software-Update-FileMaker-xDBC-client-drivers-for-FileMaker-1503692806454?language=en_US>`_
 
 
-Installation (Windows 10)
-~~~~~~~~~~~~~~~~~~~~~~~~~
+Installation sur Windows 10
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Extraire l'executable, se rendre dans le dossier nouvellement créé ``FileMaker 19 xDBC\ODBC Client Driver Installer\`` et installer la version voulue (de préference, ``FMODBC_Installer_Win64.msi``)

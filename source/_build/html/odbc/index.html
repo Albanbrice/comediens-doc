@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Configuration de la connexion ODBC &mdash; Documentation comediens-doc 0.1</title>
+  <title>Configuration du protocole ODBC &mdash; Documentation comediens-doc 0.1</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -41,11 +41,11 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../memo.html">MEMO</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration de la connexion ODBC</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration du protocole ODBC</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="odbc_FMPro.html">Paramétrage du partage ODBC dans FileMaker</a></li>
 <li class="toctree-l2"><a class="reference internal" href="odbc_Windows.html">Paramétrage du gestionnaire ODBC de Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="odbc_QGIS.html">Associer la source de données à QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odbc_QGIS.html">Paramétrage de la source ODBC dans QGIS</a></li>
 </ul>
 </li>
 </ul>
@@ -64,7 +64,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Configuration de la connexion ODBC</li>
+      <li>Configuration du protocole ODBC</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/odbc/index.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -74,18 +74,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="configuration-de-la-connexion-odbc">
-<h1>Configuration de la connexion ODBC<a class="headerlink" href="#configuration-de-la-connexion-odbc" title="Lien permanent vers ce titre"></a></h1>
+  <section id="configuration-du-protocole-odbc">
+<h1>Configuration du protocole ODBC<a class="headerlink" href="#configuration-du-protocole-odbc" title="Lien permanent vers ce titre"></a></h1>
+<p>ODBC (Open Database Connectivity) est un protocole permettant de connecter une application à une source de données. Ce protocole a été nativement développé en environnement Windows; il est également disponible sur MacOS et il existe quelques drivers sur Linux. Ce protocole permet de se passer d’un serveur de données, ces dernières étant servies à la volée par le logiciel abritant la base. Il en resulte qu’un seul utilisateur peut s’y connecter simultanément, et que le logiciel les servant doit de préférence se trouver sur la même machine que le logiciel tiers qui les consomme.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="installation.html#telechargement">Téléchargement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-windows-10">Installation (Windows 10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation-sur-windows-10">Installation sur Windows 10</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="odbc_FMPro.html">Paramétrage du partage ODBC dans FileMaker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="odbc_Windows.html">Paramétrage du gestionnaire ODBC de Windows</a></li>
-<li class="toctree-l1"><a class="reference internal" href="odbc_QGIS.html">Associer la source de données à QGIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="odbc_QGIS.html">Paramétrage de la source ODBC dans QGIS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="odbc_QGIS.html#parametrage-dans-le-data-source-manager">Paramétrage dans le Data Source Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odbc_QGIS.html#reglages-complementaires">Réglages complémentaires</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>

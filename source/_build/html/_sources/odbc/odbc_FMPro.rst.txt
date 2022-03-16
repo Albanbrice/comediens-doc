@@ -2,7 +2,7 @@ Paramétrage du partage ODBC dans FileMaker
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - ouvrir la BdD dans FileMaker
-- dans :menuselection:`File --> Sharing --> Enable ODBC/JDBC`, ouvrir la boîte de dialogue *ODBC/JDBC Settings*.
+- dans :menuselection:`File --> Sharing --> Enable ODBC/JDBC`, ouvrir la boîte de dialogue **ODBC/JDBC Settings**.
 
 .. figure:: /images/FM_odbc_01.png
 
@@ -10,5 +10,5 @@ Paramétrage du partage ODBC dans FileMaker
 
 .. figure:: /images/FM_odbc_02.png
 
-.. NOTE::
+.. IMPORTANT::
     Laisser FileMaker et la BdD ouverts tant que l'on souhaite partager les données avec une application tiers.
