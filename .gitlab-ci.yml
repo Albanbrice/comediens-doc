@@ -3,13 +3,13 @@
  pages:
   stage: deploy
   script:
-   - pip install -r requirements.txt
-   - cd source
-   - sphinx-build -d _build/doctrees . _build/html
-   - cd ..
-   - mv source/_build/html/ public/
+  - pip install -r requirements.txt
+  - cd source
+  - sphinx-build -d _build/doctrees . _build/html
+  - cd ..
+  - mv source/_build/html/ public/
   artifacts:
      paths:
      - public
   only:
-    - main
+  - main
