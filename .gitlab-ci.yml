@@ -10,6 +10,6 @@
   - mv source/_build/html/ public/
   artifacts:
      paths:
-     - public
+     - public/
   only:
   - main
