@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuration du driver ODBC &mdash; Documentation comediens-doc 0.1</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="prev" title="MEMO" href="memo.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> comediens-doc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="memo.html">MEMO</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration du driver ODBC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#parametrage-du-driver-odbc-windows">Paramétrage du driver ODBC (Windows)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#telechargement">Téléchargement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parametrage-du-partage-odbc-dans-filemaker">Paramétrage du partage ODBC dans FileMaker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parametrage-du-gestionnaire-odbc-de-windows">Paramétrage du gestionnaire ODBC de Windows</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#associer-la-source-de-donnees-a-qgis">Associer la source de données à QGIS</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">comediens-doc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Configuration du driver ODBC</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/odbc.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="configuration-du-driver-odbc">
+<h1>Configuration du driver ODBC<a class="headerlink" href="#configuration-du-driver-odbc" title="Lien permanent vers ce titre"></a></h1>
+<p>ODBC (Open Database Connectivity) est un protocole permettant de connecter une application à une source de données. Ce protocole a été nativement développé en environnement Windows; il est également disponible sur MacOS et il existe quelques drivers sur Linux.
+Ce protocole permet de se passer d’un serveur de données, ces dernières étant servies à la volée par le logiciel abritant la base. Il en resulte qu’un seul utilisateur peut s’y connecter simultanément, et que le logiciel les servant doit de préférence se trouver sur la même machine que le logiciel tiers qui les consomme.</p>
+<section id="parametrage-du-driver-odbc-windows">
+<h2>Paramétrage du driver ODBC (Windows)<a class="headerlink" href="#parametrage-du-driver-odbc-windows" title="Lien permanent vers ce titre"></a></h2>
+<section id="telechargement">
+<h3>Téléchargement<a class="headerlink" href="#telechargement" title="Lien permanent vers ce titre"></a></h3>
+<p>Télécharger, sur le site de l’éditeur, le driver <strong>xDBC</strong> correspondant à la version de FMPro installée.
+A priori, il existe peu de différence entre les différentes versions du driver. Ainsi, la version actuelle (FMPro 19) fonctionne sans problème avec la version 17 installée sur Windows 10.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A l’inverse, il est possible qu’une version du driver ne soit pas complémentement fonctionnelle avec la version de FileMaker pour laquelle elle a été créée.</p>
+</div>
+<p><a class="reference external" href="https://support.claris.com/s/article/Software-Update-FileMaker-xDBC-client-drivers-for-FileMaker-1503692806454?language=en_US">Vers la page de téléchargement (Claris)</a></p>
+</section>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Lien permanent vers ce titre"></a></h3>
+<p>Extraire l’executable, se rendre dans le dossier <code class="docutils literal notranslate"><span class="pre">FileMaker</span> <span class="pre">19</span> <span class="pre">xDBC\ODBC</span> <span class="pre">Client</span> <span class="pre">Driver</span> <span class="pre">Installer\</span></code> et installer la version voulue (de préference, <code class="docutils literal notranslate"><span class="pre">FMODBC_Installer_Win64.msi</span></code>)</p>
+</section>
+<section id="parametrage-du-partage-odbc-dans-filemaker">
+<h3>Paramétrage du partage ODBC dans FileMaker<a class="headerlink" href="#parametrage-du-partage-odbc-dans-filemaker" title="Lien permanent vers ce titre"></a></h3>
+<ul class="simple">
+<li><p>ouvrir la BdD dans FileMaker</p></li>
+<li><p>dans <span class="menuselection">File ‣ Sharing ‣ Enable ODBC/JDBC</span>, ouvrir la boîte de dialogue <em>ODBC/JDBC Settings</em>.</p></li>
+<li><p>mettre <em>ODBC/JDBC Sharing</em> sur <code class="docutils literal notranslate"><span class="pre">on</span></code>, avec le fichier courant, valable pour tous les utilisateurs, puis valider.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Laisser FileMaker et la BdD ouverts tant que l’on souhaite partager les données avec une application tiers.</p>
+</div>
+</section>
+<section id="parametrage-du-gestionnaire-odbc-de-windows">
+<h3>Paramétrage du gestionnaire ODBC de Windows<a class="headerlink" href="#parametrage-du-gestionnaire-odbc-de-windows" title="Lien permanent vers ce titre"></a></h3>
+<p>Saisir <code class="docutils literal notranslate"><span class="pre">ODBC</span></code> dans l’invite de recherche de Windows et lancer <code class="docutils literal notranslate"><span class="pre">ODBC</span> <span class="pre">Data</span> <span class="pre">Source</span> <span class="pre">(64-bit)</span></code>. Si le driver ODBC pour FileMaker a bien été installé, on doit pouvoir, dans l’onglet <em>User DSN</em>, ajouter une nouvelle source de données :</p>
+<ul class="simple">
+<li><p>Cliquer sur <cite>add</cite></p></li>
+<li><p>Sélectionner <cite>FileMaker ODBC</cite> dans la fenêtre <cite>Create New Data Source</cite>, puis <cite>Finish</cite></p></li>
+<li><p>Donner un nom à cette source de données. Par exemple, <cite>Delos</cite>; le remplissage du champ <cite>description</cite> est facultatif</p></li>
+<li><p>Si le fichier fmp12 se trouve sur le même poste, il faut renseigner l’hôte <cite>localhost</cite> ou <cite>127.0.0.1</cite>. Si le fichier est ouvert sur un autre poste, il faut renseigner l’IP appropriée.</p></li>
+<li><p>Certificat SSL : <cite>se connecter</cite> ou <cite>se connecter avec avertissement</cite>… peu importe…</p></li>
+<li><p>Dans la liste déroulante, sélectionner le nom de la base qui devrait normalement s’y afficher.</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Pour que les caractères grecs soient pleinement pris en compte, il faut accéder aux options de <cite>langue avancée</cite>, décocher la détection automatique et forcer l’encodage du texte en <cite>UTF-8</cite> puis valider.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Je n’ai pas testé ce paramètrage, mais peut-être serait-ce judicieux : cocher <cite>Interpréter les rubriques Texte comme long varchar</cite></p>
+</div>
+<ul class="simple">
+<li><p>Terminer, puis fermer ce gestionnaire ODBC.</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p>Pour plus de détail, voir sur le site de l’éditeur : <a class="reference external" href="https://support.claris.com/s/article/Configuring-a-DSN-for-FileMaker-ODBC-drivers-1503693049730?language=en_US">Configuring a DSN for FileMaker ODBC drivers</a></p>
+</div>
+</section>
+</section>
+<section id="associer-la-source-de-donnees-a-qgis">
+<h2>Associer la source de données à QGIS<a class="headerlink" href="#associer-la-source-de-donnees-a-qgis" title="Lien permanent vers ce titre"></a></h2>
+<ul class="simple">
+<li><p>Accéder au <cite>Data Source Manager</cite> (<cite>LayerData Source Manager</cite> ou <cite>CTRL-L</cite>)</p></li>
+<li><p>Dans la rubrique Vector, séléctionner <cite>Database</cite> comme  <cite>Source Type</cite></p></li>
+<li><p><strong>IMPORTANT</strong> : pour la prise en compte des caractères grecs, spécifier l’encodage en <cite>UTF-8</cite></p></li>
+<li><p>Dans la sous-rubrique <cite>Database</cite>, Sélectionner <cite>ODBC</cite> dans la liste déroulante</p></li>
+<li><dl class="simple">
+<dt>Créer une nouvelle connexion en sélectionnant celle que nous avons précédemment créée ou en spécifiant les données suivantes :</dt><dd><ul>
+<li><p><cite>Type</cite> : ODBC</p></li>
+<li><p><cite>Name</cite> : le nom que l’on souhaite</p></li>
+<li><p><cite>Host</cite> : localhost</p></li>
+<li><p><cite>Database</cite> : le nom que l’on a défini dans le gestionnaire ODBC de Windows</p></li>
+<li><p><cite>Port</cite> : peu rester vide</p></li>
+<li><p>Si l’on a défini un utilisateur et mot de passe, il faut le renseigner dans la rubrique autentification. Cela sera demander à plusieurs reprises.</p></li>
+<li><p>Tester la connexion puis valider le cas échéant.</p></li>
+<li><p>Selectionner la base que l’on vient de renseigner dans la liste déroulante, puis cliquer sur <cite>add</cite></p></li>
+<li><p>Après un court délai, une fenêtre s’ouvre avec la liste des tables contenues dans la base FileMaker, dont on peut sélectionner tout ou partie et ouvrir dans QGIS.</p></li>
+<li><p>Les tables seront empilées dans la palette des calques, il est possible de les inspecter une à une par un clic-droit, <cite>Open Attribute Table</cite></p></li>
+<li><p>si les textes en grec ne s’affichent toujours pas correctement, aller dans les propriétés du claque et forcer encore une fois l’encodage en <cite>UTF-8</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="memo.html" class="btn btn-neutral float-left" title="MEMO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Alban-Brice Pimpaud.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
