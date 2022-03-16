@@ -5,7 +5,8 @@
   script:
   - pip install -r requirements.txt
   - cd source
-  - sphinx-build -d _build/doctrees . _build/html
+  ## - sphinx-build -d _build/doctrees . _build/html
+  - sphinx-build -b _build/html/ . public
   - cd ..
   - mv source/_build/html/ public/
   artifacts:
