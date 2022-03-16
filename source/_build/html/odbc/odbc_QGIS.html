@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Associer la source de données à QGIS &mdash; Documentation comediens-doc 0.1</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> comediens-doc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../memo.html">MEMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../odbc.html">Configuration du driver ODBC</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">comediens-doc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Associer la source de données à QGIS</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/odbc/odbc_QGIS.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="associer-la-source-de-donnees-a-qgis">
+<h1>Associer la source de données à QGIS<a class="headerlink" href="#associer-la-source-de-donnees-a-qgis" title="Lien permanent vers ce titre"></a></h1>
+<p>Les instructions suivantes ont été testées avec des versions récentes de QGIS (3.18, 3.24)</p>
+<p><a class="reference external" href="https://www.qgis.org/en/site/forusers/download.html">Pour télécharger votre version de QGIS</a></p>
+<ul class="simple">
+<li><p>Accéder au <cite>Data Source Manager</cite> (<cite>LayerData Source Manager</cite> ou <cite>CTRL-L</cite>)</p></li>
+</ul>
+<figure class="align-default">
+<img alt="../_images/QGIS_odbc_01.png" src="../_images/QGIS_odbc_01.png" />
+</figure>
+<ul>
+<li><p>Dans la rubrique <cite>Vector</cite> :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>dans <cite>Source Type</cite>, cocher <cite>Database</cite>, en demandant un encodage en <cite>UTF-8</cite>.</p></li>
+<li><p>dans la section <cite>Database</cite>,selectionner <cite>ODBC</cite> dans le menu déroulant <cite>Type</cite>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>L’encodage en <cite>UTF-8</cite> est necessaire pour la bonne retranscription des caractères grecs.</p>
+</div>
+<figure class="align-default">
+<img alt="../_images/QGIS_odbc_02.png" src="../_images/QGIS_odbc_02.png" />
+</figure>
+<ul class="simple">
+<li><p>Créer une nouvelle connexion en spécifiant les paramètres suivants :</p></li>
+</ul>
+<figure class="align-default">
+<img alt="../_images/QGIS_odbc_03.png" src="../_images/QGIS_odbc_03.png" />
+</figure>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Alban-Brice Pimpaud.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

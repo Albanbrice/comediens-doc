@@ -11,7 +11,7 @@ Documentation de l'application Comédiens
    :caption: Contents:
 
    ./memo.rst
-   ./odbc.rst
+   ./odbc/index.rst
 
 
 Index et tables

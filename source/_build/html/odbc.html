@@ -80,18 +80,18 @@
   <section id="configuration-du-driver-odbc">
 <h1>Configuration du driver ODBC<a class="headerlink" href="#configuration-du-driver-odbc" title="Lien permanent vers ce titre"></a></h1>
 <p>ODBC (Open Database Connectivity) est un protocole permettant de connecter une application à une source de données. Ce protocole a été nativement développé en environnement Windows; il est également disponible sur MacOS et il existe quelques drivers sur Linux.
-Ce protocole permet de se passer d’un serveur de données, ces dernières étant servies à la volée par le logiciel abritant la base. Il en resulte qu’un seul utilisateur peut s’y connecter simultanément, et que le logiciel les servant doit de préférence se trouver sur la même machine que le logiciel tiers qui les consomme.</p>
+Ce protocole permet de se passer d’un serveur de données, ces dernières étant servies à la volée par le logiciel abritant la base. Il en resulte qu’un seul utilisateur peut s’y connecter simultanément, et que le logiciel les servant doit de préférence se trouver sur la même machine que le logiciel client.</p>
 <section id="parametrage-du-driver-odbc-windows">
 <h2>Paramétrage du driver ODBC (Windows)<a class="headerlink" href="#parametrage-du-driver-odbc-windows" title="Lien permanent vers ce titre"></a></h2>
 <section id="telechargement">
 <h3>Téléchargement<a class="headerlink" href="#telechargement" title="Lien permanent vers ce titre"></a></h3>
 <p>Télécharger, sur le site de l’éditeur, le driver <strong>xDBC</strong> correspondant à la version de FMPro installée.
-A priori, il existe peu de différence entre les différentes versions du driver. Ainsi, la version actuelle (FMPro 19) fonctionne sans problème avec la version 17 installée sur Windows 10.</p>
+A priori, il existe peu de différence entre les différentes versions du driver. Ainsi, la version actuelle (pour FMPro 19) fonctionne sans problème avec une installation FMPro 17 sur Windows 10.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A l’inverse, il est possible qu’une version du driver ne soit pas complémentement fonctionnelle avec la version de FileMaker pour laquelle elle a été créée.</p>
 </div>
-<p><a class="reference external" href="https://support.claris.com/s/article/Software-Update-FileMaker-xDBC-client-drivers-for-FileMaker-1503692806454?language=en_US">Vers la page de téléchargement (Claris)</a></p>
+<p><a class="reference external" href="https://support.claris.com/s/article/Software-Update-FileMaker-xDBC-client-drivers-for-FileMaker-1503692806454?language=en_US">Lien vers la page de téléchargement</a></p>
 </section>
 <section id="installation">
 <h3>Installation<a class="headerlink" href="#installation" title="Lien permanent vers ce titre"></a></h3>
@@ -102,8 +102,16 @@ A priori, il existe peu de différence entre les différentes versions du driver
 <ul class="simple">
 <li><p>ouvrir la BdD dans FileMaker</p></li>
 <li><p>dans <span class="menuselection">File ‣ Sharing ‣ Enable ODBC/JDBC</span>, ouvrir la boîte de dialogue <em>ODBC/JDBC Settings</em>.</p></li>
+</ul>
+<figure class="align-default">
+<img alt="_images/FM_odbc_01.png" src="_images/FM_odbc_01.png" />
+</figure>
+<ul class="simple">
 <li><p>mettre <em>ODBC/JDBC Sharing</em> sur <code class="docutils literal notranslate"><span class="pre">on</span></code>, avec le fichier courant, valable pour tous les utilisateurs, puis valider.</p></li>
 </ul>
+<figure class="align-default">
+<img alt="_images/FM_odbc_02.png" src="_images/FM_odbc_02.png" />
+</figure>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Laisser FileMaker et la BdD ouverts tant que l’on souhaite partager les données avec une application tiers.</p>
@@ -111,57 +119,113 @@ A priori, il existe peu de différence entre les différentes versions du driver
 </section>
 <section id="parametrage-du-gestionnaire-odbc-de-windows">
 <h3>Paramétrage du gestionnaire ODBC de Windows<a class="headerlink" href="#parametrage-du-gestionnaire-odbc-de-windows" title="Lien permanent vers ce titre"></a></h3>
-<p>Saisir <code class="docutils literal notranslate"><span class="pre">ODBC</span></code> dans l’invite de recherche de Windows et lancer <code class="docutils literal notranslate"><span class="pre">ODBC</span> <span class="pre">Data</span> <span class="pre">Source</span> <span class="pre">(64-bit)</span></code>. Si le driver ODBC pour FileMaker a bien été installé, on doit pouvoir, dans l’onglet <em>User DSN</em>, ajouter une nouvelle source de données :</p>
+<p>Saisir <code class="docutils literal notranslate"><span class="pre">ODBC</span></code> dans l’invite de recherche de Windows et lancer <code class="docutils literal notranslate"><span class="pre">ODBC</span> <span class="pre">Data</span> <span class="pre">Source</span> <span class="pre">(64-bit)</span></code>.</p>
+<figure class="align-default">
+<img alt="_images/WIN_DataSources.png" src="_images/WIN_DataSources.png" />
+</figure>
+<p>Si le driver ODBC pour FileMaker a bien été installé, on doit pouvoir, dans l’onglet <em>User DSN</em> (ou <em>System DSN</em>), ajouter une nouvelle source de données en cliquant sur <cite>add</cite>.</p>
+<figure class="align-default">
+<img alt="_images/DSN_FM.png" src="_images/DSN_FM.png" />
+</figure>
 <ul class="simple">
-<li><p>Cliquer sur <cite>add</cite></p></li>
-<li><p>Sélectionner <cite>FileMaker ODBC</cite> dans la fenêtre <cite>Create New Data Source</cite>, puis <cite>Finish</cite></p></li>
-<li><p>Donner un nom à cette source de données. Par exemple, <cite>Delos</cite>; le remplissage du champ <cite>description</cite> est facultatif</p></li>
+<li><p>Sélectionner <cite>FileMaker ODBC</cite> dans la fenêtre <cite>Create New Data Source</cite>, puis <cite>Finish</cite>.</p></li>
+</ul>
+<figure class="align-default">
+<img alt="_images/DSN_FM_00.png" src="_images/DSN_FM_00.png" />
+</figure>
+<ul class="simple">
+<li><p>Une nouvelle fenêtre de configuration s’affiche, suivre pas à pas la procédure.</p></li>
+</ul>
+<figure class="align-default">
+<img alt="_images/DSN_FM_01.png" src="_images/DSN_FM_01.png" />
+</figure>
+<ul class="simple">
+<li><p>Donner un nom à cette source de données. Par exemple, <cite>Delos</cite>; le remplissage du champ <cite>description</cite> est facultatif. Par convention, et pour éviter tout problème d’interconnexion, il est préférable de n’utiliser que des caractères non accentués dans le nom de la source.</p></li>
+</ul>
+<figure class="align-default">
+<img alt="_images/DSN_FM_02.png" src="_images/DSN_FM_02.png" />
+</figure>
+<ul class="simple">
 <li><p>Si le fichier fmp12 se trouve sur le même poste, il faut renseigner l’hôte <cite>localhost</cite> ou <cite>127.0.0.1</cite>. Si le fichier est ouvert sur un autre poste, il faut renseigner l’IP appropriée.</p></li>
 <li><p>Certificat SSL : <cite>se connecter</cite> ou <cite>se connecter avec avertissement</cite>… peu importe…</p></li>
+</ul>
+<figure class="align-default">
+<img alt="_images/DSN_FM_03.png" src="_images/DSN_FM_03.png" />
+</figure>
+<ul class="simple">
 <li><p>Dans la liste déroulante, sélectionner le nom de la base qui devrait normalement s’y afficher.</p></li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Je n’ai pas testé ce paramètrage, mais peut-être serait-ce judicieux de cocher <cite>Interpréter les rubriques Texte comme long varchar</cite>.</p>
+</div>
+<figure class="align-default">
+<img alt="_images/DSN_FM_04.png" src="_images/DSN_FM_04.png" />
+</figure>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Pour que les caractères grecs soient pleinement pris en compte, il faut accéder aux options de <cite>langue avancée</cite>, décocher la détection automatique et forcer l’encodage du texte en <cite>UTF-8</cite> puis valider.</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Avertissement</p>
-<p>Je n’ai pas testé ce paramètrage, mais peut-être serait-ce judicieux : cocher <cite>Interpréter les rubriques Texte comme long varchar</cite></p>
-</div>
+<figure class="align-default">
+<img alt="_images/DSN_FM_05.png" src="_images/DSN_FM_05.png" />
+</figure>
 <ul class="simple">
-<li><p>Terminer, puis fermer ce gestionnaire ODBC.</p></li>
+<li><p>La configuration achevée, on vérifie les différents paramètres, notamment l’encodage en UTF-8, puis on s’assure que la connexion fonctionne en la testant.</p></li>
+</ul>
+<figure class="align-default">
+<img alt="_images/DSN_FM_06.png" src="_images/DSN_FM_06.png" />
+</figure>
+<ul class="simple">
+<li><p>Si l’on a précisé, au sein de FileMaker, des droits d’accès à la base, ce qui est une bonne pratique, on est invité à les saisir.</p></li>
+</ul>
+<figure class="align-default">
+<img alt="_images/DSN_FM_07.png" src="_images/DSN_FM_07.png" />
+</figure>
+<figure class="align-default">
+<img alt="_images/DSN_FM_08.png" src="_images/DSN_FM_08.png" />
+</figure>
+<ul class="simple">
+<li><p>Si le test de connexion est positif, on peut terminer la configuration puis fermer le gestionnaire ODBC. Comme indiqué précédemment, FileMaker devra toutefois rester ouvert avec le fichier en cours pour maintenir l’exposition des données.</p></li>
 </ul>
 <div class="admonition seealso">
 <p class="admonition-title">Voir aussi</p>
-<p>Pour plus de détail, voir sur le site de l’éditeur : <a class="reference external" href="https://support.claris.com/s/article/Configuring-a-DSN-for-FileMaker-ODBC-drivers-1503693049730?language=en_US">Configuring a DSN for FileMaker ODBC drivers</a></p>
+<p>Pour plus de détails, voir sur le site de l’éditeur : <a class="reference external" href="https://support.claris.com/s/article/Configuring-a-DSN-for-FileMaker-ODBC-drivers-1503693049730?language=en_US">Configuring a DSN for FileMaker ODBC drivers</a></p>
 </div>
 </section>
 </section>
 <section id="associer-la-source-de-donnees-a-qgis">
 <h2>Associer la source de données à QGIS<a class="headerlink" href="#associer-la-source-de-donnees-a-qgis" title="Lien permanent vers ce titre"></a></h2>
+<p>Les instructions suivantes ont été testées avec des versions récentes de QGIS (3.18, 3.24)</p>
+<p><a class="reference external" href="https://www.qgis.org/en/site/forusers/download.html">Pour télécharger votre version de QGIS</a></p>
 <ul class="simple">
 <li><p>Accéder au <cite>Data Source Manager</cite> (<cite>LayerData Source Manager</cite> ou <cite>CTRL-L</cite>)</p></li>
-<li><p>Dans la rubrique Vector, séléctionner <cite>Database</cite> comme  <cite>Source Type</cite></p></li>
-<li><p><strong>IMPORTANT</strong> : pour la prise en compte des caractères grecs, spécifier l’encodage en <cite>UTF-8</cite></p></li>
-<li><p>Dans la sous-rubrique <cite>Database</cite>, Sélectionner <cite>ODBC</cite> dans la liste déroulante</p></li>
-<li><dl class="simple">
-<dt>Créer une nouvelle connexion en sélectionnant celle que nous avons précédemment créée ou en spécifiant les données suivantes :</dt><dd><ul>
-<li><p><cite>Type</cite> : ODBC</p></li>
-<li><p><cite>Name</cite> : le nom que l’on souhaite</p></li>
-<li><p><cite>Host</cite> : localhost</p></li>
-<li><p><cite>Database</cite> : le nom que l’on a défini dans le gestionnaire ODBC de Windows</p></li>
-<li><p><cite>Port</cite> : peu rester vide</p></li>
-<li><p>Si l’on a défini un utilisateur et mot de passe, il faut le renseigner dans la rubrique autentification. Cela sera demander à plusieurs reprises.</p></li>
-<li><p>Tester la connexion puis valider le cas échéant.</p></li>
-<li><p>Selectionner la base que l’on vient de renseigner dans la liste déroulante, puis cliquer sur <cite>add</cite></p></li>
-<li><p>Après un court délai, une fenêtre s’ouvre avec la liste des tables contenues dans la base FileMaker, dont on peut sélectionner tout ou partie et ouvrir dans QGIS.</p></li>
-<li><p>Les tables seront empilées dans la palette des calques, il est possible de les inspecter une à une par un clic-droit, <cite>Open Attribute Table</cite></p></li>
-<li><p>si les textes en grec ne s’affichent toujours pas correctement, aller dans les propriétés du claque et forcer encore une fois l’encodage en <cite>UTF-8</cite>.</p></li>
 </ul>
-</dd>
-</dl>
+<figure class="align-default">
+<img alt="_images/QGIS_odbc_01.png" src="_images/QGIS_odbc_01.png" />
+</figure>
+<ul>
+<li><p>Dans la rubrique <cite>Vector</cite> :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>dans <cite>Source Type</cite>, cocher <cite>Database</cite>, en demandant un encodage en <cite>UTF-8</cite>.</p></li>
+<li><p>dans la section <cite>Database</cite>,selectionner <cite>ODBC</cite> dans le menu déroulant <cite>Type</cite>.</p></li>
+</ul>
+</div></blockquote>
 </li>
 </ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>L’encodage en <cite>UTF-8</cite> est necessaire pour la bonne retranscription des caractères grecs.</p>
+</div>
+<figure class="align-default">
+<img alt="_images/QGIS_odbc_02.png" src="_images/QGIS_odbc_02.png" />
+</figure>
+<ul class="simple">
+<li><p>Créer une nouvelle connexion en spécifiant les paramètres suivants :</p></li>
+</ul>
+<figure class="align-default">
+<img alt="_images/QGIS_odbc_03.png" src="_images/QGIS_odbc_03.png" />
+</figure>
 </section>
 </section>
 
