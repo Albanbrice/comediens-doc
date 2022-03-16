@@ -3,17 +3,18 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to comediens-doc's documentation!
-=========================================
+Documentation de l'application Comédiens
+========================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
    ./memo.rst
+   ./odbc/index.rst
 
 
-Indices and tables
+Index et tables
 ==================
 
 * :ref:`genindex`

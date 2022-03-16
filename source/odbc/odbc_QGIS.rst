@@ -28,14 +28,14 @@ Les instructions suivantes ont été testées avec des versions récentes de QGI
 .. figure:: /images/QGIS_odbc_03.png
 
     
-    - `Type` : ODBC
-    - `Name` : le nom que l'on souhaite
-    - `Host` : localhost
-    - `Database` : le nom que l'on a défini dans le gestionnaire ODBC de Windows
-    - `Port` : peu rester vide
-    - Si l'on a défini un utilisateur et mot de passe, il faut le renseigner dans la rubrique autentification. Cela sera demander à plusieurs reprises.
-    - Tester la connexion puis valider le cas échéant.
-    - Selectionner la base que l'on vient de renseigner dans la liste déroulante, puis cliquer sur `add`
-    - Après un court délai, une fenêtre s'ouvre avec la liste des tables contenues dans la base FileMaker, dont on peut sélectionner tout ou partie et ouvrir dans QGIS. 
-    - Les tables seront empilées dans la palette des calques, il est possible de les inspecter une à une par un clic-droit, `Open Attribute Table`
-    - si les textes en grec ne s'affichent toujours pas correctement, aller dans les propriétés du claque et forcer encore une fois l'encodage en `UTF-8`. 
+- `Type` : ODBC
+- `Name` : le nom que l'on souhaite
+- `Host` : localhost
+- `Database` : le nom que l'on a défini dans le gestionnaire ODBC de Windows
+- `Port` : peu rester vide
+- Si l'on a défini un utilisateur et mot de passe, il faut le renseigner dans la rubrique autentification. Cela sera demander à plusieurs reprises.
+- Tester la connexion puis valider le cas échéant.
+- Selectionner la base que l'on vient de renseigner dans la liste déroulante, puis cliquer sur `add`
+- Après un court délai, une fenêtre s'ouvre avec la liste des tables contenues dans la base FileMaker, dont on peut sélectionner tout ou partie et ouvrir dans QGIS. 
+- Les tables seront empilées dans la palette des calques, il est possible de les inspecter une à une par un clic-droit, `Open Attribute Table`
+- si les textes en grec ne s'affichent toujours pas correctement, aller dans les propriétés du claque et forcer encore une fois l'encodage en `UTF-8`. 

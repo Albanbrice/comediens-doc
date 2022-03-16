@@ -18,7 +18,8 @@
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Recherche" href="../search.html" /> 
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="prev" title="Paramétrage du gestionnaire ODBC de Windows" href="odbc_Windows.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -37,9 +38,15 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../memo.html">MEMO</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../odbc.html">Configuration du driver ODBC</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Configuration de la connexion ODBC</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odbc_FMPro.html">Paramétrage du partage ODBC dans FileMaker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odbc_Windows.html">Paramétrage du gestionnaire ODBC de Windows</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Associer la source de données à QGIS</a></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -56,6 +63,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Configuration de la connexion ODBC</a> &raquo;</li>
       <li>Associer la source de données à QGIS</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/odbc/odbc_QGIS.rst.txt" rel="nofollow"> Afficher la source de la page</a>
@@ -99,12 +107,27 @@
 <figure class="align-default">
 <img alt="../_images/QGIS_odbc_03.png" src="../_images/QGIS_odbc_03.png" />
 </figure>
+<ul class="simple">
+<li><p><cite>Type</cite> : ODBC</p></li>
+<li><p><cite>Name</cite> : le nom que l’on souhaite</p></li>
+<li><p><cite>Host</cite> : localhost</p></li>
+<li><p><cite>Database</cite> : le nom que l’on a défini dans le gestionnaire ODBC de Windows</p></li>
+<li><p><cite>Port</cite> : peu rester vide</p></li>
+<li><p>Si l’on a défini un utilisateur et mot de passe, il faut le renseigner dans la rubrique autentification. Cela sera demander à plusieurs reprises.</p></li>
+<li><p>Tester la connexion puis valider le cas échéant.</p></li>
+<li><p>Selectionner la base que l’on vient de renseigner dans la liste déroulante, puis cliquer sur <cite>add</cite></p></li>
+<li><p>Après un court délai, une fenêtre s’ouvre avec la liste des tables contenues dans la base FileMaker, dont on peut sélectionner tout ou partie et ouvrir dans QGIS.</p></li>
+<li><p>Les tables seront empilées dans la palette des calques, il est possible de les inspecter une à une par un clic-droit, <cite>Open Attribute Table</cite></p></li>
+<li><p>si les textes en grec ne s’affichent toujours pas correctement, aller dans les propriétés du claque et forcer encore une fois l’encodage en <cite>UTF-8</cite>.</p></li>
+</ul>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="odbc_Windows.html" class="btn btn-neutral float-left" title="Paramétrage du gestionnaire ODBC de Windows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+    </div>
 
   <hr/>
 

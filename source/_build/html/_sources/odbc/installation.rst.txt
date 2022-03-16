@@ -14,6 +14,6 @@ A priori, il existe peu de différence entre les différentes versions du driver
 
 
 Installation (Windows 10)
-~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Extraire l'executable, se rendre dans le dossier nouvellement créé ``FileMaker 19 xDBC\ODBC Client Driver Installer\`` et installer la version voulue (de préference, ``FMODBC_Installer_Win64.msi``)
