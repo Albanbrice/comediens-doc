@@ -64,8 +64,8 @@ Paramétrage dans le Data Source Manager
 
 Réglages complémentaires
 ~~~~~~~~~~~~~~~~~~~~~~~~
-A l'importation, les tables sont chargées dans le **Layers Panel** de QGIS. S'agissant de données exposées à la volée depuis FMPro, celles-ci ne disposent pas d'entités géographiques (pas de points, de lignes ou de surfaces) et ne peuvent donc pas être représentées graphiquement dans l'espace de travail.
-On va procéder à plusieurs vérifications et réglages pour s'assurer que les données tabulaires peuvent s'afficher correctement.
+A l'importation, les tables sont chargées dans le **Layers Panel** de QGIS. S'agissant de données exposées à la volée depuis FMPro, celles-ci ne disposent pas d'entités géographiques (pas de points, de lignes ou de surfaces) et ne peuvent donc pas être représentées graphiquement dans l'espace de travail. Par ailleurs, QGIS va les importer avec des paramètres de base qui ne correspondent pas nécessairement à ceux que nous souhaitons.
+On va donc procéder à plusieurs vérifications et réglages pour s'assurer que les données tabulaires peuvent s'afficher correctement.
 
 1. :kbd:`clic-droit` sur une des tables affichées dans le **Layers Panel**, pour en afficher les `Properties`
 
