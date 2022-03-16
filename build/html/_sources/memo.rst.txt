@@ -1,0 +1,3 @@
+MEMO
+====
+`Déployer sur github <https://blog.flozz.fr/2020/09/21/deployer-automatiquement-sur-github-pages-avec-github-actions/>`_
