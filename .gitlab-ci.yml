@@ -8,9 +8,9 @@
   ## - sphinx-build -d _build/doctrees . _build/html
   - sphinx-build -b html . public
   - cd ..
-  ##- mv source/_build/html/ public/
+  - mv source/_build/html public
   artifacts:
      paths:
-     - public/
+     - public
   only:
   - main
