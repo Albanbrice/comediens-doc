@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; Documentation comediens-doc 0.1</title>
+  <title>Installation du driver ODBC &mdash; Documentation comediens-doc 0.1</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -42,14 +42,14 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../memo.html">MEMO</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Configuration du protocole ODBC</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Installation du driver ODBC</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#telechargement">Téléchargement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#installation-sur-windows-10">Installation sur Windows 10</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="odbc_FMPro.html">Paramétrage du partage ODBC dans FileMaker</a></li>
 <li class="toctree-l2"><a class="reference internal" href="odbc_Windows.html">Paramétrage du gestionnaire ODBC de Windows</a></li>
-<li class="toctree-l2"><a class="reference internal" href="odbc_QGIS.html">Associer la source de données à QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odbc_QGIS.html">Paramétrage de la source ODBC dans QGIS</a></li>
 </ul>
 </li>
 </ul>
@@ -69,7 +69,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="index.html">Configuration du protocole ODBC</a> &raquo;</li>
-      <li>Installation</li>
+      <li>Installation du driver ODBC</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/odbc/installation.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -79,12 +79,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Lien permanent vers ce titre"></a></h1>
+  <section id="installation-du-driver-odbc">
+<h1>Installation du driver ODBC<a class="headerlink" href="#installation-du-driver-odbc" title="Lien permanent vers ce titre"></a></h1>
 <section id="telechargement">
 <h2>Téléchargement<a class="headerlink" href="#telechargement" title="Lien permanent vers ce titre"></a></h2>
 <p>Télécharger, sur le site de l’éditeur, le driver <strong>xDBC</strong> correspondant à la version de FMPro installée.
-A priori, il existe peu de différence entre les différentes versions du driver. Ainsi, la version actuelle (pour FMPro 19) fonctionne sans problème avec une installation FMPro 17 sur Windows 10.</p>
+A priori, il existe peu de différences entre les versions du driver. Ainsi, la version actuelle (pour FMPro 19) fonctionne sans problème avec une installation FMPro 17 sur Windows 10.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>A l’inverse, il est possible qu’une version du driver ne soit pas complémentement fonctionnelle avec la version de FileMaker pour laquelle elle a été créée.</p>
@@ -93,7 +93,7 @@ A priori, il existe peu de différence entre les différentes versions du driver
 </section>
 <section id="installation-sur-windows-10">
 <h2>Installation sur Windows 10<a class="headerlink" href="#installation-sur-windows-10" title="Lien permanent vers ce titre"></a></h2>
-<p>Extraire l’executable, se rendre dans le dossier nouvellement créé <code class="docutils literal notranslate"><span class="pre">FileMaker</span> <span class="pre">19</span> <span class="pre">xDBC\ODBC</span> <span class="pre">Client</span> <span class="pre">Driver</span> <span class="pre">Installer\</span></code> et installer la version voulue (de préference, <code class="docutils literal notranslate"><span class="pre">FMODBC_Installer_Win64.msi</span></code>)</p>
+<p>Extraire l’executable <code class="docutils literal notranslate"><span class="pre">FM**_xDBC_****.exe</span></code>, se rendre dans le dossier nouvellement créé <code class="docutils literal notranslate"><span class="pre">FileMaker</span> <span class="pre">**</span> <span class="pre">xDBC\ODBC</span> <span class="pre">Client</span> <span class="pre">Driver</span> <span class="pre">Installer\</span></code> et installer la version voulue, 64 ou 32 bits, en fonction du type de l’OS ainsi que de la version du logiciel client (donc de préférence : <code class="docutils literal notranslate"><span class="pre">FMODBC_Installer_Win64.msi</span></code>)</p>
 </section>
 </section>
 

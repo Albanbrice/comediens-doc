@@ -6,7 +6,7 @@ Saisir ``ODBC`` dans l'invite de recherche de Windows et lancer ``ODBC Data Sour
 
 .. figure:: /images/WIN_DataSources.png
 
-Si le driver ODBC pour FileMaker a bien été installé, on doit pouvoir, dans l'onglet *User DSN* (ou *System DSN*), ajouter une nouvelle source de données en cliquant sur `add`.
+Si le driver ODBC pour FileMaker a bien été :doc:`installé </odbc/installation>` et si la base est correctement ouverte et :doc:`partagée </odbc/odbc_FMPro>` dans FileMaker, on doit pouvoir, dans l'onglet *User DSN* (ou *System DSN*), ajouter une nouvelle source de données en cliquant sur `add`.
 
 
 
