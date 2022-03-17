@@ -10,7 +10,7 @@ Documentation de l'application Comédiens
    :maxdepth: 2
    :caption: Contents:
 
-   ./memo.rst
+   ./notes/memo.rst
    ./odbc/index.rst
 
 
