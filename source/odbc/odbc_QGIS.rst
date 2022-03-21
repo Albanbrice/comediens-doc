@@ -54,6 +54,27 @@ Paramétrage dans le Data Source Manager
       - facultatif
 
 
+.. list-table:: Authentification basic
+
+
+  * - User Name
+    - Admin
+    - FM assigne l'identifiant 'Admin' par défaut. En saisir un autre le cas échéant
+  * - Password
+    - 
+    - FM n'assigne pas de mot de passe par défaut. Le saisir le cas échéant
+
+
+.. note:: 
+  Par défaut, FileMaker créée un utilisateur "Admin", sans mot de passe, ayant les droits sur la base. A défaut d'avoir spécifié d'autres utilisateurs, il faudra veiller à renseigner scrupuleusement cet identifiant dans les boites de dialogues de QGIS, en en respectant la casse, sans mot de passe.
+  
+  Cocher la case ``store``.
+.. warning::
+  Si on renseigne un mot de passe en regard de l'utilisateur, celui-là sera enregistré et affiché en texte intégral dans QGIS.
+
+
+  
+
 .. figure:: /images/QGIS_odbc_04.png
 
 .. figure:: /images/QGIS_odbc_05.png

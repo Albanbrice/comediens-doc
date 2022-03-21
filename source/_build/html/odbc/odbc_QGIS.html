@@ -39,9 +39,9 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../memo.html">MEMO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../notes/memo.html">MEMO</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Configuration du protocole ODBC</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation du driver ODBC</a></li>
 <li class="toctree-l2"><a class="reference internal" href="odbc_FMPro.html">Paramétrage du partage ODBC dans FileMaker</a></li>
 <li class="toctree-l2"><a class="reference internal" href="odbc_Windows.html">Paramétrage du gestionnaire ODBC de Windows</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Paramétrage de la source ODBC dans QGIS</a><ul>
@@ -148,6 +148,33 @@
 </tr>
 </tbody>
 </table>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Authentification basic</span><a class="headerlink" href="#id2" title="Lien permanent vers ce tableau"></a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>User Name</p></td>
+<td><p>Admin</p></td>
+<td><p>FM assigne l’identifiant “Admin” par défaut. En saisir un autre le cas échéant</p></td>
+</tr>
+<tr class="row-even"><td><p>Password</p></td>
+<td></td>
+<td><p>FM n’assigne pas de mot de passe par défaut. Le saisir le cas échéant</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Par défaut, FileMaker créée un utilisateur « Admin », sans mot de passe, ayant les droits sur la base. A défaut d’avoir spécifié d’autres utilisateurs, il faudra veiller à renseigner scrupuleusement cet identifiant dans les boites de dialogues de QGIS, en en respectant la casse, sans mot de passe.</p>
+<p>Cocher la case <code class="docutils literal notranslate"><span class="pre">store</span></code>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Si on renseigne un mot de passe en regard de l’utilisateur, celui-là sera enregistré et affiché en texte intégral dans QGIS.</p>
+</div>
 <figure class="align-default">
 <img alt="../_images/QGIS_odbc_04.png" src="../_images/QGIS_odbc_04.png" />
 </figure>
