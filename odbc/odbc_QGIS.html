@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paramétrage de la source ODBC dans QGIS &mdash; Documentation comediens-doc 0.1</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="prev" title="Paramétrage du gestionnaire ODBC de Windows" href="odbc_Windows.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> comediens-doc
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../notes/memo.html">MEMO</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Configuration du protocole ODBC</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="installation.html">Installation du driver ODBC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odbc_FMPro.html">Paramétrage du partage ODBC dans FileMaker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="odbc_Windows.html">Paramétrage du gestionnaire ODBC de Windows</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Paramétrage de la source ODBC dans QGIS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#parametrage-dans-le-data-source-manager">Paramétrage dans le Data Source Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reglages-complementaires">Réglages complémentaires</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">comediens-doc</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="index.html">Configuration du protocole ODBC</a> &raquo;</li>
+      <li>Paramétrage de la source ODBC dans QGIS</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/odbc/odbc_QGIS.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="parametrage-de-la-source-odbc-dans-qgis">
+<h1>Paramétrage de la source ODBC dans QGIS<a class="headerlink" href="#parametrage-de-la-source-odbc-dans-qgis" title="Lien permanent vers ce titre"></a></h1>
+<p>Les instructions suivantes ont été testées avec les versions 3.18 et 3.24 de QGIS (64-bit).</p>
+<blockquote>
+<div><p><a class="reference external" href="https://www.qgis.org/en/site/forusers/download.html">Pour télécharger votre version de QGIS</a></p>
+</div></blockquote>
+<section id="parametrage-dans-le-data-source-manager">
+<h2>Paramétrage dans le Data Source Manager<a class="headerlink" href="#parametrage-dans-le-data-source-manager" title="Lien permanent vers ce titre"></a></h2>
+<ol class="arabic simple">
+<li><p>Accéder au <strong>Data Source Manager</strong> : <span class="menuselection">Layer ‣ Data Source Manager</span> ou <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">CTRL</kbd>-<kbd class="kbd docutils literal notranslate">L</kbd></kbd></p></li>
+</ol>
+<figure class="align-default">
+<img alt="../_images/QGIS_odbc_01.png" src="../_images/QGIS_odbc_01.png" />
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>Dans la partie <cite>Vector</cite> du <strong>Data Source Manager</strong> :</p></li>
+</ol>
+<ul class="simple">
+<li><p>dans <strong>Source Type</strong>, cocher <code class="docutils literal notranslate"><span class="pre">Database</span></code>, en demandant un encodage en <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code>.</p></li>
+<li><p>dans la section <strong>Database</strong>, selectionner <code class="docutils literal notranslate"><span class="pre">ODBC</span></code> dans le menu déroulant <cite>Type</cite>.</p></li>
+</ul>
+<figure class="align-default">
+<img alt="../_images/QGIS_odbc_02.png" src="../_images/QGIS_odbc_02.png" />
+</figure>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>L’encodage en <cite>UTF-8</cite> est necessaire pour la bonne retranscription des caractères grecs.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Créer une nouvelle connexion en renseignant les champs suivants :</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../_images/QGIS_odbc_03.png" src="../_images/QGIS_odbc_03.png" />
+</figure>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Connection Information</span><a class="headerlink" href="#id1" title="Lien permanent vers ce tableau"></a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>champ</p></th>
+<th class="head"><p>valeur</p></th>
+<th class="head"><p>commentaire</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Type</p></td>
+<td><p>ODBC</p></td>
+<td><p>obligatoire</p></td>
+</tr>
+<tr class="row-odd"><td><p>Name</p></td>
+<td><p>Delos</p></td>
+<td><p>nom que l’on souhaite donner à cette connexion dans QGIS</p></td>
+</tr>
+<tr class="row-even"><td><p>Host</p></td>
+<td><p>localhost</p></td>
+<td><p>localhost, 127.0.0.1 ou autre IP</p></td>
+</tr>
+<tr class="row-odd"><td><p>Database</p></td>
+<td><p>Delos</p></td>
+<td><p>nom de la base que l’on a exposé via le driver ODBC</p></td>
+</tr>
+<tr class="row-even"><td><p>Port</p></td>
+<td></td>
+<td><p>facultatif</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Authentification basic</span><a class="headerlink" href="#id2" title="Lien permanent vers ce tableau"></a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>User Name</p></td>
+<td><p>Admin</p></td>
+<td><p>FM assigne l’identifiant “Admin” par défaut. En saisir un autre le cas échéant</p></td>
+</tr>
+<tr class="row-even"><td><p>Password</p></td>
+<td></td>
+<td><p>FM n’assigne pas de mot de passe par défaut. Le saisir le cas échéant</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Par défaut, FileMaker créée un utilisateur « Admin », sans mot de passe, ayant les droits sur la base. A défaut d’avoir spécifié d’autres utilisateurs, il faudra veiller à renseigner scrupuleusement cet identifiant dans les boites de dialogues de QGIS, en en respectant la casse, sans mot de passe.</p>
+<p>Cocher la case <code class="docutils literal notranslate"><span class="pre">store</span></code>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Si on renseigne un mot de passe en regard de l’utilisateur, celui-là sera enregistré et affiché en texte intégral dans QGIS.</p>
+</div>
+<figure class="align-default">
+<img alt="../_images/QGIS_odbc_04.png" src="../_images/QGIS_odbc_04.png" />
+</figure>
+<figure class="align-default">
+<img alt="../_images/QGIS_odbc_05.png" src="../_images/QGIS_odbc_05.png" />
+</figure>
+<figure class="align-default">
+<img alt="../_images/QGIS_odbc_06.png" src="../_images/QGIS_odbc_06.png" />
+</figure>
+<figure class="align-default">
+<img alt="../_images/QGIS_odbc_07.png" src="../_images/QGIS_odbc_07.png" />
+</figure>
+</section>
+<section id="reglages-complementaires">
+<h2>Réglages complémentaires<a class="headerlink" href="#reglages-complementaires" title="Lien permanent vers ce titre"></a></h2>
+<p>A l’importation, les tables sont chargées dans le <strong>Layers Panel</strong> de QGIS. S’agissant de données exposées à la volée depuis FMPro, celles-ci ne disposent pas d’entités géographiques (pas de points, de lignes ou de surfaces) et ne peuvent donc pas être représentées graphiquement dans l’espace de travail. Par ailleurs, QGIS va les importer avec des paramètres de base qui ne correspondent pas nécessairement à ceux que nous souhaitons.
+On va donc procéder à plusieurs vérifications et réglages pour s’assurer que les données tabulaires peuvent s’afficher correctement.</p>
+<ol class="arabic simple">
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">clic</kbd>-<kbd class="kbd docutils literal notranslate">droit</kbd></kbd> sur une des tables affichées dans le <strong>Layers Panel</strong>, pour en afficher les <cite>Properties</cite></p></li>
+</ol>
+<figure class="align-default">
+<img alt="../_images/QGIS_odbc_08.png" src="../_images/QGIS_odbc_08.png" />
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>Dans les <strong>Layer Properties</strong>, rubrique <cite>Source</cite>, on s’assure que l’encodage est bien en <code class="docutils literal notranslate"><span class="pre">UTF-8</span></code>, puis on valide (<code class="docutils literal notranslate"><span class="pre">Apply</span></code>). On peut fermer le <strong>Layer Properties</strong> (<code class="docutils literal notranslate"><span class="pre">OK</span></code>)</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Un autre type d’encodage posera problème avec l’affichage des caractères grecs.</p>
+</div>
+<figure class="align-default">
+<img alt="../_images/QGIS_odbc_09.png" src="../_images/QGIS_odbc_09.png" />
+</figure>
+<ol class="arabic simple" start="3">
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">clic</kbd>-<kbd class="kbd docutils literal notranslate">droit</kbd></kbd> sur une des tables affichées dans le <strong>Layers Panel</strong>, pour afficher cette fois la table attributaire <cite>Open Attribute Table</cite></p></li>
+</ol>
+<figure class="align-default">
+<img alt="../_images/QGIS_odbc_10.png" src="../_images/QGIS_odbc_10.png" />
+</figure>
+<ol class="arabic simple" start="4">
+<li><p>On vérifie la qualité des données. Ici les caractères grecs sont bien rendus.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../_images/QGIS_odbc_11.png" src="../_images/QGIS_odbc_11.png" />
+</figure>
+<ol class="arabic simple" start="5">
+<li><p>On peut retourner dans les <strong>Layer Properties</strong> et vérifier, cette fois dans la rubrique <cite>Information</cite>, section <cite>Information from provider</cite>, que les données sont correctement endcodées.</p></li>
+</ol>
+<figure class="align-default">
+<img alt="../_images/QGIS_odbc_12.png" src="../_images/QGIS_odbc_12.png" />
+</figure>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="odbc_Windows.html" class="btn btn-neutral float-left" title="Paramétrage du gestionnaire ODBC de Windows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Alban-Brice Pimpaud.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
